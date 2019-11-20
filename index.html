@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+#ft  {
+       position: relative;
+       left: 12%;
+       color: green;
+}
+
+</style>
+</head>
+<body>
+<img id="x" src="xmas_img.png" alt="Christmas Tree Img">
+<h3 id="ft"></h3>
+<script>
+var today = new Date();
+var year = today.getFullYear();
+var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var ymth = monthName[today.getMonth()];
+var el1 = document.getElementById('ft');
+el1.innerHTML =  '<h3>' + ymth + "  " +   year + '</h3>';
+
+
+
+if (today.getMonth() === 11) {
+                   document.getElementById('x').style.display='block';
+} else {
+          document.getElementById('x').style.display='none';
+}  
+</script>
+
+</body>
+</html>
